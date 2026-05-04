@@ -1,48 +1,34 @@
 # Project Summary
 
-## Project Name
+## AI Agent for Article Generation
 
-AI Agent for Article Generation
+AI Agent for Article Generation is a practical AI project that generates structured technical articles from a topic provided by the user.
 
-## Description
+The project was built with Python, LangChain, Azure OpenAI, FastAPI, and APIs. It exposes an API endpoint that receives an article topic and returns a complete content package including title, subtitle, summary, SEO description, keywords, Hashnode tags, full article, LinkedIn post, research notes, and draft status.
 
-AI Agent for Article Generation is a practical AI project built with Python, LangChain, Azure OpenAI, FastAPI, and APIs.
+## Purpose
 
-The agent receives a topic through an API request, uses LangChain for prompt orchestration, calls Azure OpenAI to generate structured content, and returns a complete article package including title, subtitle, summary, SEO description, keywords, Hashnode tags, full article, LinkedIn post, research notes, and draft status.
+The purpose of this project is to demonstrate how AI agents can support technical content creation by combining language models, prompt orchestration, structured outputs, and API-based automation.
 
-## Problem Solved
+Instead of generating only free-form text, the agent returns organized fields that can be reused by other tools, such as n8n, Google Sheets, Gmail, Google Docs, or publishing workflows.
 
-Technical professionals, learners, and content creators often spend time organizing article ideas, creating outlines, writing drafts, generating SEO metadata, preparing publication tags, and creating social media posts.
+## Problem Addressed
 
-This project automates the first draft creation process while keeping the output structured and ready for human review.
+Creating technical articles usually requires several manual steps:
 
-## Main Capabilities
+- defining the article angle
+- organizing the structure
+- writing the draft
+- preparing SEO metadata
+- selecting keywords and tags
+- creating a social media post
+- preparing the content for review or publication
 
-- Receives article topics through a FastAPI endpoint
-- Uses Azure OpenAI as the language model provider
-- Uses LangChain for prompt orchestration
-- Generates structured article output
-- Creates article title, subtitle, summary, SEO description, keywords, and tags
-- Generates a complete long-form article draft
-- Generates a LinkedIn post for article promotion
-- Includes a simple research step through a public API
-- Exposes the agent through an API endpoint
-- Can be integrated with n8n using HTTP Request
+This project automates the first draft generation process while keeping the final content structured and ready for human review.
 
-## Technologies Used
+## Technical Architecture
 
-- Azure OpenAI
-- Python
-- LangChain
-- FastAPI
-- APIs
-- Pydantic
-- Uvicorn
-- n8n integration
-
-## Workflow Overview
-
-The project follows this flow:
+The project follows this architecture:
 
 ```text
 User topic
@@ -51,7 +37,7 @@ FastAPI endpoint
 ↓
 LangChain prompt orchestration
 ↓
-Research step through public API
+Simple research step through public API
 ↓
 Azure OpenAI generation
 ↓
